@@ -1,0 +1,223 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Work Sans'), local('WorkSans-Regular'), url(https://fonts.gstatic.com/s/worksans/v5/QGYsz_wNahGAdqQ43Rh_fKDs.ttf) format('truetype');
+}
+html,
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 62.5%;
+}
+p {
+  line-height: 1.5;
+}
+h1 {
+  font-size: 3.8rem;
+  font-weight: 500;
+}
+h2 {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 2rem;
+}
+div.background {
+  height: 50vh;
+  background: url(../images/background1.jpg);
+}
+div.background h1 {
+  color: white;
+  text-align: center;
+  padding: 10%;
+}
+section.main-section {
+  text-align: center;
+  padding: 2%;
+}
+section.main-section p {
+  padding: 5% 20%;
+}
+section.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+section.features-section .feature-container {
+  width: 20%;
+}
+section.metrics-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5% 0%;
+  margin: 2% auto;
+  background-color: #4e4e4e;
+}
+section.metrics-section .metric-content {
+  width: 20%;
+  text-align: center;
+  color: #fff;
+}
+section.metrics-section .metric-content p {
+  padding: 5%;
+}
+section.subscribe-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10%;
+}
+section.subscribe-section .subscribe-content {
+  width: 50%;
+  text-align: left;
+}
+section.subscribe-section .subscribe-content form {
+  width: 100%;
+}
+section.subscribe-section .subscribe-content form .btn {
+  width: 100%;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+header nav {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2%;
+}
+header nav a {
+  text-decoration: none;
+  color: #363636;
+  font-weight: 600;
+}
