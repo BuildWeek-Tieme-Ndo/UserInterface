@@ -37,7 +37,7 @@ section.metrics-section{
     justify-content: space-around;
    
     padding: 5% 0%;
-    margin: 2% auto;
+    margin-top: 2%;
     background-color: #4e4e4e;
 
     .metric-content {
@@ -58,17 +58,43 @@ section.subscribe-section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 10%;
-
+    //padding: 10%;
+    background:grey;
+    color: white;
+    h2,p{
+        padding: 2%;
+    }
     .subscribe-content {
-        width:50%;
+        width:40%;
         text-align: left;
+        padding:5%;
+       
 
         form{
-            width: 100%;
-            .btn{
-                width:100%;
-            }
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width:100%;
+            margin:2% 0%;
+           .full{
+               width: 100%;
+               input {
+                   width:100%;
+                   line-height:2;
+                   padding: 2%;
+                   font-weight:bold;
+                   
+               }
+               
+           }
+           .btn {
+               text-align: center;
+               background: @btn-color;
+               padding: 2%;
+               color: white;
+
+               
+           }
         }
     }
 

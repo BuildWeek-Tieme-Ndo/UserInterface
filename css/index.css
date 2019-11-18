@@ -148,6 +148,9 @@ h2 {
 h3 {
   font-size: 2rem;
 }
+h4 {
+  font-size: 1.6rem;
+}
 div.background {
   height: 50vh;
   background: url(../images/background1.jpg);
@@ -177,7 +180,7 @@ section.metrics-section {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 5% 0%;
-  margin: 2% auto;
+  margin-top: 2%;
   background-color: #4e4e4e;
 }
 section.metrics-section .metric-content {
@@ -192,17 +195,39 @@ section.subscribe-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10%;
+  background: grey;
+  color: white;
+}
+section.subscribe-section h2,
+section.subscribe-section p {
+  padding: 2%;
 }
 section.subscribe-section .subscribe-content {
-  width: 50%;
+  width: 40%;
   text-align: left;
+  padding: 5%;
 }
 section.subscribe-section .subscribe-content form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2% 0%;
+}
+section.subscribe-section .subscribe-content form .full {
   width: 100%;
 }
-section.subscribe-section .subscribe-content form .btn {
+section.subscribe-section .subscribe-content form .full input {
   width: 100%;
+  line-height: 2;
+  padding: 2%;
+  font-weight: bold;
+}
+section.subscribe-section .subscribe-content form .btn {
+  text-align: center;
+  background: #4e4e4e;
+  padding: 2%;
+  color: white;
 }
 header {
   display: flex;
