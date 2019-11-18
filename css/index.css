@@ -229,6 +229,34 @@ section.subscribe-section .subscribe-content form .btn {
   padding: 2%;
   color: white;
 }
+section.blog-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2%;
+}
+section.blog-section .blog-content {
+  width: 28%;
+  margin: 1%;
+  padding: 1%;
+  background: #faf9f9;
+  border: 1px solid #eeeeee;
+}
+section.contact-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+section.contact-section .contact-content {
+  width: 45%;
+  padding: 2%;
+}
+section.contact-section .contact-content form {
+  display: flex;
+  flex-wrap: wrap;
+}
 header {
   display: flex;
   flex-wrap: wrap;
