@@ -1,0 +1,321 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Work Sans'), local('WorkSans-Regular'), url(https://fonts.gstatic.com/s/worksans/v5/QGYsz_wNahGAdqQ43Rh_fKDs.ttf) format('truetype');
+}
+* {
+  max-width: 100%;
+}
+html,
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 62.5%;
+}
+p {
+  line-height: 1.5;
+}
+h1 {
+  font-size: 3.8rem;
+  font-weight: 500;
+}
+h2 {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.6rem;
+}
+div.background {
+  height: 50vh;
+  background: url(../images/background1.jpg);
+}
+div.background h1 {
+  color: white;
+  text-align: center;
+  padding: 10%;
+}
+section.main-section {
+  text-align: center;
+  padding: 2%;
+}
+section.main-section p {
+  padding: 5% 20%;
+}
+section.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+section.features-section .feature-container {
+  width: 20%;
+}
+section.metrics-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5% 0%;
+  margin-top: 2%;
+  background-color: #4e4e4e;
+}
+section.metrics-section .metric-content {
+  width: 20%;
+  text-align: center;
+  color: #fff;
+}
+section.metrics-section .metric-content p {
+  padding: 5%;
+}
+section.subscribe-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: grey;
+  color: white;
+}
+section.subscribe-section h2,
+section.subscribe-section p {
+  padding: 2%;
+}
+section.subscribe-section .subscribe-content {
+  width: 40%;
+  text-align: left;
+  padding: 5%;
+}
+section.subscribe-section .subscribe-content form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2% 0%;
+}
+section.subscribe-section .subscribe-content form .full {
+  width: 100%;
+}
+section.subscribe-section .subscribe-content form .full input {
+  width: 100%;
+  line-height: 2;
+  padding: 2%;
+  font-weight: bold;
+}
+section.subscribe-section .subscribe-content form .btn {
+  text-align: center;
+  background: #4e4e4e;
+  padding: 2%;
+  color: white;
+}
+section.blog-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2%;
+}
+section.blog-section .blog-content {
+  width: 28%;
+  margin: 1%;
+  padding: 1%;
+  background: #faf9f9;
+  border: 1px solid #eeeeee;
+}
+section.contact-section .contact-heading {
+  text-align: center;
+}
+section.contact-section .contact-heading p {
+  color: #888;
+  font-size: 1.5rem;
+  margin: 5% auto 5% auto;
+}
+section.contact-section .contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+section.contact-section .contact-container .contact-content {
+  width: 45%;
+}
+section.contact-section .contact-container .contact-content image-container {
+  width: 100%;
+}
+section.contact-section .contact-container .contact-content image-container img {
+  width: 100%;
+}
+section.contact-section .contact-container .contact-content .full {
+  width: 100%;
+}
+section.contact-section .contact-container .contact-content .full label {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: #363636;
+  line-height: 2.5;
+  width: 100%;
+  font-weight: 500;
+}
+section.contact-section .contact-container .contact-content .full input,
+section.contact-section .contact-container .contact-content .full textarea {
+  width: 100%;
+  border: 1px solid #eeeeee;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+header nav {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2%;
+}
+header nav a {
+  text-decoration: none;
+  color: #363636;
+  font-weight: 600;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  background: #232328;
+}
+footer nav {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2%;
+}
+footer nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
