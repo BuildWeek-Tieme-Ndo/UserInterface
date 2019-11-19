@@ -122,20 +122,55 @@ section.blog-section{
 }
 
 section.contact-section{
-    display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    
+    .contact-heading{
+        text-align: center;
+        p {
+            color: @special-color;
+            font-size: 1.5rem;
+            margin: 5% auto 5% auto;
+        }
+    }
 
     //div
-    .contact-content{
-        width:45%;
-        padding: 2%;
+    .contact-container{
+        display: flex;
+     
+        flex-wrap: wrap;
+        justify-content: space-around;
 
-        form{
-            display: flex;
-            flex-wrap: wrap;
+        
+
+        .contact-content{
+
+           
+            width:45%;
+        
             
+            image-container {
+                width:100%;
+                img {
+                    width:100%;
+                }
+            }
+
+            .full{
+                width:100%;
+                label {
+                    font-size: 1.4rem;
+                //    
+                    margin-bottom: 5px;
+                    color:@font-color;
+                    line-height:2.5;
+                    width:100%;
+                    font-weight:500;
+                }
+                input,textarea{
+                    width:100%;
+                    border: 1px solid #eeeeee;
+                }
+            }
+
         }
     }
 

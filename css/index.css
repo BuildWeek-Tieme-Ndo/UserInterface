@@ -129,6 +129,9 @@ table {
   font-display: swap;
   src: local('Work Sans'), local('WorkSans-Regular'), url(https://fonts.gstatic.com/s/worksans/v5/QGYsz_wNahGAdqQ43Rh_fKDs.ttf) format('truetype');
 }
+* {
+  max-width: 100%;
+}
 html,
 body {
   font-family: 'Work Sans', sans-serif;
@@ -243,19 +246,43 @@ section.blog-section .blog-content {
   background: #faf9f9;
   border: 1px solid #eeeeee;
 }
-section.contact-section {
+section.contact-section .contact-heading {
+  text-align: center;
+}
+section.contact-section .contact-heading p {
+  color: #888;
+  font-size: 1.5rem;
+  margin: 5% auto 5% auto;
+}
+section.contact-section .contact-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-section.contact-section .contact-content {
+section.contact-section .contact-container .contact-content {
   width: 45%;
-  padding: 2%;
 }
-section.contact-section .contact-content form {
-  display: flex;
-  flex-wrap: wrap;
+section.contact-section .contact-container .contact-content image-container {
+  width: 100%;
+}
+section.contact-section .contact-container .contact-content image-container img {
+  width: 100%;
+}
+section.contact-section .contact-container .contact-content .full {
+  width: 100%;
+}
+section.contact-section .contact-container .contact-content .full label {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: #363636;
+  line-height: 2.5;
+  width: 100%;
+  font-weight: 500;
+}
+section.contact-section .contact-container .contact-content .full input,
+section.contact-section .contact-container .contact-content .full textarea {
+  width: 100%;
+  border: 1px solid #eeeeee;
 }
 header {
   display: flex;
@@ -272,5 +299,23 @@ header nav {
 header nav a {
   text-decoration: none;
   color: #363636;
+  font-weight: 600;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  background: #232328;
+}
+footer nav {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2%;
+}
+footer nav a {
+  text-decoration: none;
+  color: white;
   font-weight: 600;
 }
