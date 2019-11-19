@@ -256,33 +256,45 @@ section.contact-section .contact-heading p {
 }
 section.contact-section .contact-container {
   display: flex;
+  justify-content: center;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  margin: 0% 20%;
 }
 section.contact-section .contact-container .contact-content {
-  width: 45%;
-}
-section.contact-section .contact-container .contact-content image-container {
-  width: 100%;
-}
-section.contact-section .contact-container .contact-content image-container img {
-  width: 100%;
-}
-section.contact-section .contact-container .contact-content .full {
-  width: 100%;
+  width: 450px;
+  margin: 0;
+  padding: 0;
 }
 section.contact-section .contact-container .contact-content .full label {
   font-size: 1.4rem;
+  font-weight: 900;
   margin-bottom: 5px;
   color: #363636;
   line-height: 2.5;
   width: 100%;
-  font-weight: 500;
 }
 section.contact-section .contact-container .contact-content .full input,
 section.contact-section .contact-container .contact-content .full textarea {
-  width: 100%;
   border: 1px solid #eeeeee;
+}
+section.team-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+section.team-section .team-content {
+  width: 300px;
+  padding: 2%;
+  margin: 2%;
+}
+section.team-section .team-content .team-intro {
+  text-align: center;
+}
+section.team-section .team-content .team-intro h3,
+section.team-section .team-content .team-intro h4 {
+  padding-top: 2%;
 }
 header {
   display: flex;

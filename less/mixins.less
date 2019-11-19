@@ -1,8 +1,11 @@
 
-.flex-layout(@justify, @direction) {
-    display:flex;
-    justify-content:flex-end;
-    flex-direction: row;
+
+
+.flex-display(@justify,@direction,@wrap) {
+    display: flex;
+    justify-content: @justify;
+    flex-direction: @direction;
+    flex-wrap: @wrap;
 }
 
 @mobile: ~"(min-width: 600px)";
