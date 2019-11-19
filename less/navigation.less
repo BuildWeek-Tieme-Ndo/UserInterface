@@ -1,22 +1,42 @@
 @import "mixins";
 header{
     //
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    
+    .flex-display(space-between,row,wrap);
+    padding: 2.3%;
+    
+    
+    @media @mobile{
+        .flex-display(center,column,wrap);
+    }
+    .logo{
+        width: 30px;
+        margin-left: 1%
+
+       
+    }
+
     
     
     nav {
         width: 40%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        .flex-display(space-between,row,wrap);
         padding: 2%;
+
+        @media @mobile{
+            .flex-display(center,column,wrap);
+        }
 
         a {
             text-decoration: none;
-            color: @font-color;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            color: @nav-font;
             font-weight:600;
+
+            @media @mobile{
+                padding: 2%;
+            }
             
         }
         

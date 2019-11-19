@@ -1,7 +1,7 @@
 
 
 div.background {
-    height: 50vh;
+    height: 63vh;
     background: url(../images/background1.jpg);
 
     h1 {
@@ -10,161 +10,187 @@ div.background {
         padding:10%;
     }
 }
+div.container {
+    padding-top:9%;
+    margin-left:10%;
+    margin-right:10%;
+   
 
-section.main-section {
-    text-align: center;
-    padding:2%;
-    p {
-        padding: 5% 20%;
+    section.main-section {
+        text-align: center;
+       
+        p {
+            padding-top: 10%;
+            color:@special-color;
+            font-size:1.5rem;
+            line-height:2.5rem;
+        }
     }
+
 }
+    section.features-section{
+       
+        .flex-display(space-between,row,wrap);
+        padding-top:5%;
+        @media @tablet {
+            
+            .flex-display(center,column,wrap);
+        }
+       
+        
+        .feature-container{
+           width:300px;
+           padding-top:5%;
+           
 
-
-section.features-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-    .feature-container{
-        width:20%;
+            p {
+                color: @features-font-color;
+                font-size:1.4rem;
+                line-height:1.6;
+                padding-top:5%;
+            
+            }
+        }
     }
-}
 
 section.metrics-section{
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-   
+    
+    
+    .flex-display(space-between,row,wrap);
+
     padding: 5% 0%;
     margin-top: 2%;
     background-color: #4e4e4e;
+    height:32vh;
 
     .metric-content {
-        width: 20%;
+        width: 200px;
         text-align: center;
         color:#fff;
         
         p{
-            padding: 5%;
+           padding-top:20%;
+            font-size:1.5rem;
+            line-height:1.5;
         }
     }
 
 }
 
 
-section.subscribe-section{
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    //padding: 10%;
-    background:grey;
-    color: white;
-    h2,p{
-        padding: 2%;
-    }
-    .subscribe-content {
-        width:40%;
-        text-align: left;
-        padding:5%;
-       
-
-        form{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            width:100%;
-            margin:2% 0%;
-           .full{
-               width: 100%;
-               input {
-                   width:100%;
-                   line-height:2;
-                   padding: 2%;
-                   font-weight:bold;
-                   
-               }
-               
-           }
-           .btn {
-               text-align: center;
-               background: @btn-color;
-               padding: 2%;
-               color: white;
-
-               
-           }
+    section.subscribe-section{
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        //padding: 10%;
+        background:grey;
+        color: white;
+        h2,p{
+            padding: 2%;
         }
-    }
-
-    
-  
-
-}
-
-//Blog
-section.blog-section{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    padding:2%;
-
-   
-    .blog-content{
-        width:28%;
-        margin: 1%;
-        padding: 1%;
-        background:@news-background;
-        border: 1px solid #eeeeee;
-    }
-}
-
-section.contact-section{
-    
-    .contact-heading{
-        text-align: center;
-        p {
-            color: @special-color;
-            font-size: 1.5rem;
-            margin: 5% auto 5% auto;
-        }
-    }
-
-    //div
-    .contact-container{
-        .flex-display(center,row,wrap);
-
-        margin:0% 20%;
-
-        .contact-content{
-
-            width:450px;
-            // width:300px;
-            margin:0;
-            padding:0;
-           
+        .subscribe-content {
+            width:40%;
+            text-align: left;
+            padding:5%;
         
 
-             .full{
-            //     //width:100%;
-                label {
-                    font-size: 1.4rem;
-                    font-weight: 900;
-                    margin-bottom: 5px;
-                    color:@font-color;
-                    line-height:2.5;
+            form{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width:100%;
+                margin:2% 0%;
+            .full{
+                width: 100%;
+                input {
                     width:100%;
-                    //font-weight:500;
+                    line-height:2;
+                    padding: 2%;
+                    font-weight:bold;
+                    
                 }
-                input,textarea{
-                    //width:100%;
-                    border: 1px solid #eeeeee;
-                }
+                
             }
+            .btn {
+                text-align: center;
+                background: @btn-color;
+                padding: 2%;
+                color: white;
 
+                
+            }
+            }
+        }
+
+        
+    
+
+    }
+
+    //Blog
+    section.blog-section{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        padding:2%;
+
+    
+        .blog-content{
+            width:28%;
+            margin: 1%;
+            padding: 1%;
+            background:@news-background;
+            border: 1px solid #eeeeee;
         }
     }
 
-}
+    section.contact-section{
+        
+        .contact-heading{
+            text-align: center;
+            p {
+                color: @special-color;
+                font-size: 1.5rem;
+                margin: 5% auto 5% auto;
+            }
+        }
+
+        //div
+        .contact-container{
+            .flex-display(center,row,wrap);
+
+            margin:0% 20%;
+
+            .contact-content{
+
+                width:450px;
+                // width:300px;
+                margin:0;
+                padding:0;
+            
+            
+
+                .full{
+                //     //width:100%;
+                    label {
+                        font-size: 1.4rem;
+                        font-weight: 900;
+                        margin-bottom: 5px;
+                        color:@font-color;
+                        line-height:2.5;
+                        width:100%;
+                        //font-weight:500;
+                    }
+                    input,textarea{
+                        //width:100%;
+                        border: 1px solid #eeeeee;
+                    }
+                }
+
+            }
+        }
+
+    }
