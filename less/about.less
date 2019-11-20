@@ -19,13 +19,22 @@ section.team-section{
 
             h5 {
                 padding: 3%;
-                color:@blog-category-color;
+                .color {
+                    color:@blog-category-color;
+                }
                 
             }
             p {
                 padding-top: 5%;
                 font-size: 1.5rem;
                 color:@features-font-color;
+                a {
+                    text-decoration: none;
+                    color:@nav-font;
+                    &:hover {
+                        color:@blog-category-color;
+                    }
+                }
             }
         }
     }
