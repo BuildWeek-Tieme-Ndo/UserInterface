@@ -4,7 +4,12 @@ header{
     
     .flex-display(space-between,row,wrap);
     //padding: 3.5%;
-
+    width:100%;
+    position:fixed;
+    top: 0%;
+    
+    z-index:99;
+    background: white;
     
     
     
@@ -12,7 +17,7 @@ header{
         .flex-display(center,column,wrap);
     }
     .logo{
-        width: 30px;
+        //width: 30px;
         margin-left: 1%;
     }
 
@@ -36,6 +41,14 @@ header{
             text-transform: uppercase;
             color: @nav-font;
             font-weight:600;
+            &:hover {
+                color:@blog-category-color;
+                &:after{
+                    .under_line();
+                    width:100%;
+                    margin:0%;
+                }
+            }
 
             @media @mobile{
                 padding: 2%;
