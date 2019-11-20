@@ -3,12 +3,36 @@
 div.background {
     height: 51vh;
     background: url(../images/background1.jpg);
-
+    opacity:.8;
+    
+   div {
+    padding:10%;
+    
     h1 {
         color: white;
-        text-align: center;
-        padding:10%;
+        text-align: left;
+        padding-bottom: 2%;
+        @media @tablet{
+            text-align: center;
+        }
+       
     }
+    .learn-more {
+        .primary_button();
+        text-decoration: none;
+        width:160px;
+        @media @tablet {
+            margin-left: 35%;
+        }
+
+        @media @mobile {
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 10%;
+        }
+    }
+   }
+   
 }
 div.container {
     padding-top:9%;
@@ -18,6 +42,12 @@ div.container {
 
     section.main-section {
         text-align: center;
+        h2 {
+        
+            &:after{
+                .under_line();
+            }
+        }
        
         p {
             padding-top: 10%;
@@ -57,18 +87,31 @@ section.metrics-section{
 
     
     
-    .flex-display(space-around,row,wrap);
+    .flex-display(space-around,row,wrap,@align: flex-start);
 
-    padding: 5% 5%;
+    padding: 10% 5%;
     margin-top: 2%;
     background-color: #4e4e4e;
-    height:33vh;
+    //height:33vh;
 
     .metric-content {
         width: 150px;
         text-align: center;
         color:#fff;
+
+        h2{
+            margin-bottom: 10%;
+        }
+       div {
         
+        &:after {
+            .under_line();
+        }
+       }
+        
+        @media @tablet{
+            margin-top: 5%;
+        }
         
         p{
            padding-top:20%;
@@ -135,12 +178,13 @@ section.metrics-section{
                 
             }
             .btn {
-                text-align: center;
-                background: @btn-color;
-                padding: 2%;
-                color: #fff;
-                text-transform: uppercase;
-                font-size:1.4rem;
+                // text-align: center;
+                // background: @btn-color;
+                // padding: 2%;
+                // color: #fff;
+                // text-transform: uppercase;
+                // font-size:1.4rem;
+                .btn_class();
 
                 
             }
@@ -162,19 +206,21 @@ section.metrics-section{
             color:@heading-colors;
             
             &:after{
-                content:'';
-                display:block;
-                width:20px;
-                padding:2%;
-                border-bottom:2px solid @blog-category-color;
-                margin-left:45%;
+                .under_line();
               }
         }
         .blog-container{
             .flex-display(space-around,row,wrap,@align: flex-start);
             margin:5%;
             padding-top:5%;
+           
+            @media @tablet {
+                .flex-display(flex-start,row,wrap,@align: flex-start);
+            }
 
+            @media @mobile {
+                .flex-display(center,column,wrap,@align: flex-start);
+            }
 
     
             .blog-content{
@@ -183,6 +229,14 @@ section.metrics-section{
                 padding: 1%;
                 background:@news-background;
                 border: 1px solid #eeeeee;
+
+                @media @tablet {
+                    width: 45%;
+                }
+
+                @media @tablet {
+                    width: 100%;
+                }
                 
                 h4 {
                     padding:5%;
@@ -208,18 +262,20 @@ section.metrics-section{
     }
 
     section.contact-section{
-        padding:5%;
+        //padding:5%;
+        padding-bottom: 2%;
         
         .contact-heading{
             text-align: center;
             h1 {
                 &:after{
-                    content:'';
-                    display:block;
-                    width:20px;
-                    padding:2%;
-                    border-bottom: 2px solid @blog-category-color;
-                    margin-left:auto;
+                    // content:'';
+                    // display:block;
+                    // width:20px;
+                    // padding:2%;
+                    // border-bottom: 2px solid @blog-category-color;
+                    // margin-left:auto;
+                    .under_line();
 
                    
                 width:20px;
@@ -244,12 +300,21 @@ section.metrics-section{
 
             .contact-content{
 
-                width:42%;
+                width:30%;
                 // width:300px;
                 margin:0;
-                padding:1%;
+                
+                padding-right: 8%;
+
+                @media @tablet {
+                    width: 100%;
+                    padding: 8%;
+                }
             
-            
+                div.btn{
+                    margin-top:3px;
+                    .btn_class();
+                }
 
                 .full{
                 //     //width:100%;
@@ -271,6 +336,8 @@ section.metrics-section{
                         width:100%;
                     }
                 }
+
+                
 
             }
         }
