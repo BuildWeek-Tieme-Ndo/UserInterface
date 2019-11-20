@@ -1,9 +1,13 @@
 
-.flex-layout(@justify, @direction) {
-    display:flex;
-    justify-content:flex-end;
-    flex-direction: row;
+
+
+.flex-display(@justify,@direction,@wrap,@align: center) {
+    display: flex;
+    justify-content: @justify;
+    flex-direction: @direction;
+    flex-wrap: @wrap;
+    align-items: @align;
 }
 
-@mobile: ~"(min-width: 600px)";
-@tablet: ~"(min-width: 900px)";
+@mobile: ~"(max-width: 500px)";
+@tablet: ~"(max-width: 800px)";

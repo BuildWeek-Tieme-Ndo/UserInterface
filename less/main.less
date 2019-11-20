@@ -1,7 +1,7 @@
 
 
 div.background {
-    height: 50vh;
+    height: 51vh;
     background: url(../images/background1.jpg);
 
     h1 {
@@ -10,168 +10,269 @@ div.background {
         padding:10%;
     }
 }
+div.container {
+    padding-top:9%;
+    margin-left:10%;
+    margin-right:10%;
+   
 
-section.main-section {
-    text-align: center;
-    padding:2%;
-    p {
-        padding: 5% 20%;
+    section.main-section {
+        text-align: center;
+       
+        p {
+            padding-top: 10%;
+            color:@special-color;
+            font-size:1.5rem;
+            line-height:2.5rem;
+        }
     }
+
 }
+    section.features-section{
+       
+        .flex-display(space-between,row,wrap);
+        padding-top:5%;
+        @media @tablet {
+            
+            .flex-display(center,column,wrap);
+        }
+       
+        
+        .feature-container{
+           width:300px;
+           padding-top:5%;
+           
 
-
-section.features-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-    .feature-container{
-        width:20%;
+            p {
+                color: @features-font-color;
+                font-size:1.4rem;
+                line-height:1.6;
+                padding-top:5%;
+            
+            }
+        }
     }
-}
 
 section.metrics-section{
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-   
-    padding: 5% 0%;
+    
+    
+    .flex-display(space-around,row,wrap);
+
+    padding: 5% 5%;
     margin-top: 2%;
     background-color: #4e4e4e;
+    height:33vh;
 
     .metric-content {
-        width: 20%;
+        width: 150px;
         text-align: center;
         color:#fff;
         
+        
         p{
-            padding: 5%;
+           padding-top:20%;
+            font-size:1.5rem;
+            line-height:1.5;
         }
     }
 
 }
 
 
-section.subscribe-section{
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    //padding: 10%;
-    background:grey;
-    color: white;
-    h2,p{
-        padding: 2%;
-    }
-    .subscribe-content {
-        width:40%;
-        text-align: left;
-        padding:5%;
-       
-
-        form{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            width:100%;
-            margin:2% 0%;
-           .full{
-               width: 100%;
-               input {
-                   width:100%;
-                   line-height:2;
-                   padding: 2%;
-                   font-weight:bold;
-                   
-               }
-               
-           }
-           .btn {
-               text-align: center;
-               background: @btn-color;
-               padding: 2%;
-               color: white;
-
-               
-           }
-        }
-    }
-
-    
-  
-
-}
-
-//Blog
-section.blog-section{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    padding:2%;
-
-   
-    .blog-content{
-        width:28%;
-        margin: 1%;
-        padding: 1%;
-        background:@news-background;
-        border: 1px solid #eeeeee;
-    }
-}
-
-section.contact-section{
-    
-    .contact-heading{
-        text-align: center;
-        p {
-            color: @special-color;
-            font-size: 1.5rem;
-            margin: 5% auto 5% auto;
-        }
-    }
-
-    //div
-    .contact-container{
-        display: flex;
-     
-        flex-wrap: wrap;
-        justify-content: space-around;
-
+    section.subscribe-section{
         
-
-        .contact-content{
-
-           
-            width:45%;
+        .flex-display(space-around,row,wrap);
+        //padding: 10%;
+        background:rgba(17, 17, 17, .3);
+        color: white;
+        // height:34vh;
         
+        padding:6%;
+        //Media
+        @media @tablet {
             
-            image-container {
+            .flex-display(center,column,wrap);
+        }
+
+        h2,p{
+            padding: 2%;
+        }
+        .subscribe-content {
+            width:40%;
+            text-align: left;
+            
+            letter-spacing: 1px;
+            @media @tablet {
+            
                 width:100%;
-                img {
-                    width:100%;
-                }
             }
 
-            .full{
+            h2{
+                font-size:2.5rem; 
+            }
+            p{
+                color:#ddd;
+                font-size:1.5rem;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                
                 width:100%;
-                label {
-                    font-size: 1.4rem;
-                //    
-                    margin-bottom: 5px;
-                    color:@font-color;
-                    line-height:2.5;
+                margin:2% 0%;
+            .full{
+                width: 100%;
+                input {
                     width:100%;
-                    font-weight:500;
+                    line-height:2;
+                    padding: 2%;
+                    font-weight:bold;
+                    
                 }
-                input,textarea{
-                    width:100%;
-                    border: 1px solid #eeeeee;
+                
+            }
+            .btn {
+                text-align: center;
+                background: @btn-color;
+                padding: 2%;
+                color: #fff;
+                text-transform: uppercase;
+                font-size:1.4rem;
+
+                
+            }
+            
+            }
+        }
+
+        
+    
+
+    }
+
+    //Blog
+    section.blog-section{
+        padding:10%;
+        text-align: center;
+        h2{
+            font-size:3.6rem;
+            color:@heading-colors;
+            
+            &:after{
+                content:'';
+                display:block;
+                width:20px;
+                padding:2%;
+                border-bottom:2px solid @blog-category-color;
+                margin-left:45%;
+              }
+        }
+        .blog-container{
+            .flex-display(space-around,row,wrap,@align: flex-start);
+            margin:5%;
+            padding-top:5%;
+
+
+    
+            .blog-content{
+                width:27%;
+                margin: 1%;
+                padding: 1%;
+                background:@news-background;
+                border: 1px solid #eeeeee;
+                
+                h4 {
+                    padding:5%;
+                    font-size:1.8rem;
+                }
+
+                h5 {
+                    padding: 3%;
+
+                    .color {
+                        color:@blog-category-color;
+                    }
+                }
+                p {
+                    padding-top: 5%;
+                    font-size: 1.5rem;
+                    color:@features-font-color;
                 }
             }
 
         }
+        
     }
 
-}
+    section.contact-section{
+        padding:5%;
+        
+        .contact-heading{
+            text-align: center;
+            h1 {
+                &:after{
+                    content:'';
+                    display:block;
+                    width:20px;
+                    padding:2%;
+                    border-bottom: 2px solid @blog-category-color;
+                    margin-left:auto;
+
+                   
+                width:20px;
+                padding:2%;
+                border-bottom:2px solid @blog-category-color;
+                margin-left:45%;
+
+                }
+            }
+            p {
+                color: @special-color;
+                font-size: 1.5rem;
+                margin: 5% auto 5% auto;
+            }
+        }
+
+        //div
+        .contact-container{
+            .flex-display(center,row,wrap);
+
+            margin:0% 5%;
+
+            .contact-content{
+
+                width:42%;
+                // width:300px;
+                margin:0;
+                padding:1%;
+            
+            
+
+                .full{
+                //     //width:100%;
+                    label {
+                        font-size: 1.4rem;
+                        font-weight: 900;
+                        margin-bottom: 5px;
+                        color:@font-color;
+                        line-height:2.5;
+                        width:100%;
+                        //font-weight:500;
+                    }
+                    input,textarea{
+                        //width:100%;
+                        border: 1px solid #ccc;
+                        border-radius: 3px;
+                        padding:3px;
+                        line-height:2.5rem;
+                        width:100%;
+                    }
+                }
+
+            }
+        }
+
+    }
