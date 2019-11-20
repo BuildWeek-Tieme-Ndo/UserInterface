@@ -1,7 +1,7 @@
 
 
 div.background {
-    height: 63vh;
+    height: 51vh;
     background: url(../images/background1.jpg);
 
     h1 {
@@ -57,17 +57,18 @@ section.metrics-section{
 
     
     
-    .flex-display(space-between,row,wrap);
+    .flex-display(space-around,row,wrap);
 
-    padding: 5% 0%;
+    padding: 5% 5%;
     margin-top: 2%;
     background-color: #4e4e4e;
-    height:32vh;
+    height:33vh;
 
     .metric-content {
-        width: 200px;
+        width: 150px;
         text-align: center;
         color:#fff;
+        
         
         p{
            padding-top:20%;
@@ -81,25 +82,45 @@ section.metrics-section{
 
     section.subscribe-section{
         
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        .flex-display(space-around,row,wrap);
         //padding: 10%;
-        background:grey;
+        background:rgba(17, 17, 17, .3);
         color: white;
+        // height:34vh;
+        
+        padding:6%;
+        //Media
+        @media @tablet {
+            
+            .flex-display(center,column,wrap);
+        }
+
         h2,p{
             padding: 2%;
         }
         .subscribe-content {
             width:40%;
             text-align: left;
-            padding:5%;
-        
+            
+            letter-spacing: 1px;
+            @media @tablet {
+            
+                width:100%;
+            }
+
+            h2{
+                font-size:2.5rem; 
+            }
+            p{
+                color:#ddd;
+                font-size:1.5rem;
+            }
 
             form{
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
+                
                 width:100%;
                 margin:2% 0%;
             .full{
@@ -117,10 +138,13 @@ section.metrics-section{
                 text-align: center;
                 background: @btn-color;
                 padding: 2%;
-                color: white;
+                color: #fff;
+                text-transform: uppercase;
+                font-size:1.4rem;
 
                 
             }
+            
             }
         }
 
@@ -131,26 +155,80 @@ section.metrics-section{
 
     //Blog
     section.blog-section{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-around;
-        padding:2%;
+        padding:10%;
+        text-align: center;
+        h2{
+            font-size:3.6rem;
+            color:@heading-colors;
+            
+            &:after{
+                content:'';
+                display:block;
+                width:20px;
+                padding:2%;
+                border-bottom:2px solid @blog-category-color;
+                margin-left:45%;
+              }
+        }
+        .blog-container{
+            .flex-display(space-around,row,wrap,@align: flex-start);
+            margin:5%;
+            padding-top:5%;
+
 
     
-        .blog-content{
-            width:28%;
-            margin: 1%;
-            padding: 1%;
-            background:@news-background;
-            border: 1px solid #eeeeee;
+            .blog-content{
+                width:27%;
+                margin: 1%;
+                padding: 1%;
+                background:@news-background;
+                border: 1px solid #eeeeee;
+                
+                h4 {
+                    padding:5%;
+                    font-size:1.8rem;
+                }
+
+                h5 {
+                    padding: 3%;
+
+                    .color {
+                        color:@blog-category-color;
+                    }
+                }
+                p {
+                    padding-top: 5%;
+                    font-size: 1.5rem;
+                    color:@features-font-color;
+                }
+            }
+
         }
+        
     }
 
     section.contact-section{
+        padding:5%;
         
         .contact-heading{
             text-align: center;
+            h1 {
+                &:after{
+                    content:'';
+                    display:block;
+                    width:20px;
+                    padding:2%;
+                    border-bottom: 2px solid @blog-category-color;
+                    margin-left:auto;
+
+                   
+                width:20px;
+                padding:2%;
+                border-bottom:2px solid @blog-category-color;
+                margin-left:45%;
+
+                }
+            }
             p {
                 color: @special-color;
                 font-size: 1.5rem;
@@ -162,14 +240,14 @@ section.metrics-section{
         .contact-container{
             .flex-display(center,row,wrap);
 
-            margin:0% 20%;
+            margin:0% 5%;
 
             .contact-content{
 
-                width:450px;
+                width:42%;
                 // width:300px;
                 margin:0;
-                padding:0;
+                padding:1%;
             
             
 
@@ -186,7 +264,11 @@ section.metrics-section{
                     }
                     input,textarea{
                         //width:100%;
-                        border: 1px solid #eeeeee;
+                        border: 1px solid #ccc;
+                        border-radius: 3px;
+                        padding:3px;
+                        line-height:2.5rem;
+                        width:100%;
                     }
                 }
 

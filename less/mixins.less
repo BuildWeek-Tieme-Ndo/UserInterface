@@ -1,12 +1,12 @@
 
 
 
-.flex-display(@justify,@direction,@wrap) {
+.flex-display(@justify,@direction,@wrap,@align: center) {
     display: flex;
     justify-content: @justify;
     flex-direction: @direction;
     flex-wrap: @wrap;
-    align-items: center;
+    align-items: @align;
 }
 
 @mobile: ~"(max-width: 500px)";

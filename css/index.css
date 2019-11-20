@@ -156,8 +156,11 @@ h4 {
   color: #444;
   font-weight: 500;
 }
+h5 {
+  font-size: 1.3rem;
+}
 div.background {
-  height: 63vh;
+  height: 51vh;
   background: url(../images/background1.jpg);
 }
 div.background h1 {
@@ -208,17 +211,17 @@ section.features-section .feature-container p {
 }
 section.metrics-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding: 5% 0%;
+  padding: 5% 5%;
   margin-top: 2%;
   background-color: #4e4e4e;
-  height: 32vh;
+  height: 33vh;
 }
 section.metrics-section .metric-content {
-  width: 200px;
+  width: 150px;
   text-align: center;
   color: #fff;
 }
@@ -229,10 +232,22 @@ section.metrics-section .metric-content p {
 }
 section.subscribe-section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
-  background: grey;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  background: rgba(17, 17, 17, 0.3);
   color: white;
+  padding: 6%;
+}
+@media (max-width: 800px) {
+  section.subscribe-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 section.subscribe-section h2,
 section.subscribe-section p {
@@ -241,7 +256,19 @@ section.subscribe-section p {
 section.subscribe-section .subscribe-content {
   width: 40%;
   text-align: left;
-  padding: 5%;
+  letter-spacing: 1px;
+}
+@media (max-width: 800px) {
+  section.subscribe-section .subscribe-content {
+    width: 100%;
+  }
+}
+section.subscribe-section .subscribe-content h2 {
+  font-size: 2.5rem;
+}
+section.subscribe-section .subscribe-content p {
+  color: #ddd;
+  font-size: 1.5rem;
 }
 section.subscribe-section .subscribe-content form {
   display: flex;
@@ -263,24 +290,71 @@ section.subscribe-section .subscribe-content form .btn {
   text-align: center;
   background: #4e4e4e;
   padding: 2%;
-  color: white;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.4rem;
 }
 section.blog-section {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 2%;
+  padding: 10%;
+  text-align: center;
 }
-section.blog-section .blog-content {
-  width: 28%;
+section.blog-section h2 {
+  font-size: 3.6rem;
+  color: #363636;
+}
+section.blog-section h2:after {
+  content: '';
+  display: block;
+  width: 20px;
+  padding: 2%;
+  border-bottom: 2px solid #46d2a3;
+  margin-left: 45%;
+}
+section.blog-section .blog-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 5%;
+  padding-top: 5%;
+}
+section.blog-section .blog-container .blog-content {
+  width: 27%;
   margin: 1%;
   padding: 1%;
   background: #faf9f9;
   border: 1px solid #eeeeee;
 }
+section.blog-section .blog-container .blog-content h4 {
+  padding: 5%;
+  font-size: 1.8rem;
+}
+section.blog-section .blog-container .blog-content h5 {
+  padding: 3%;
+}
+section.blog-section .blog-container .blog-content h5 .color {
+  color: #46d2a3;
+}
+section.blog-section .blog-container .blog-content p {
+  padding-top: 5%;
+  font-size: 1.5rem;
+  color: #333;
+}
+section.contact-section {
+  padding: 5%;
+}
 section.contact-section .contact-heading {
   text-align: center;
+}
+section.contact-section .contact-heading h1:after {
+  content: '';
+  display: block;
+  margin-left: auto;
+  width: 20px;
+  padding: 2%;
+  border-bottom: 2px solid #46d2a3;
+  margin-left: 45%;
 }
 section.contact-section .contact-heading p {
   color: #888;
@@ -293,12 +367,12 @@ section.contact-section .contact-container {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0% 20%;
+  margin: 0% 5%;
 }
 section.contact-section .contact-container .contact-content {
-  width: 450px;
+  width: 42%;
   margin: 0;
-  padding: 0;
+  padding: 1%;
 }
 section.contact-section .contact-container .contact-content .full label {
   font-size: 1.4rem;
@@ -310,7 +384,11 @@ section.contact-section .contact-container .contact-content .full label {
 }
 section.contact-section .contact-container .contact-content .full input,
 section.contact-section .contact-container .contact-content .full textarea {
-  border: 1px solid #eeeeee;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px;
+  line-height: 2.5rem;
+  width: 100%;
 }
 section.team-section {
   display: flex;
@@ -337,7 +415,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding: 2.3%;
+  padding: 3.5%;
 }
 @media (max-width: 500px) {
   header {
