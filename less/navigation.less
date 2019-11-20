@@ -3,12 +3,12 @@ header{
     //
     
     .flex-display(space-between,row,wrap);
-    padding: 3.5%;
+    //padding: 3.5%;
 
     
     
     
-    @media @mobile{
+    @media @tablet{
         .flex-display(center,column,wrap);
     }
     .logo{
@@ -22,7 +22,10 @@ header{
         width: 40%;
         .flex-display(space-between,row,wrap);
         padding: 2%;
-
+        margin: 0% 2%;
+        @media @tablet {
+            width: 100%;
+        }
         @media @mobile{
             .flex-display(center,column,wrap);
         }

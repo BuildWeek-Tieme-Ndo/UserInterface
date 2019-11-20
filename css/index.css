@@ -162,11 +162,47 @@ h5 {
 div.background {
   height: 51vh;
   background: url(../images/background1.jpg);
+  opacity: 0.8;
 }
-div.background h1 {
-  color: white;
-  text-align: center;
+div.background div {
   padding: 10%;
+}
+div.background div h1 {
+  color: white;
+  text-align: left;
+  padding-bottom: 2%;
+}
+@media (max-width: 800px) {
+  div.background div h1 {
+    text-align: center;
+  }
+}
+div.background div .learn-more {
+  color: #fff;
+  background: #46d2a3;
+  height: 50px;
+  line-height: 50px;
+  text-transform: capitalize;
+  display: block;
+  position: relative;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  width: 160px;
+}
+@media (max-width: 800px) {
+  div.background div .learn-more {
+    margin-left: 35%;
+  }
+}
+@media (max-width: 500px) {
+  div.background div .learn-more {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+  }
 }
 div.container {
   padding-top: 9%;
@@ -175,6 +211,14 @@ div.container {
 }
 div.container section.main-section {
   text-align: center;
+}
+div.container section.main-section h2:after {
+  content: '';
+  display: block;
+  width: 20px;
+  padding: 2%;
+  border-bottom: 2px solid #46d2a3;
+  margin-left: 45%;
 }
 div.container section.main-section p {
   padding-top: 10%;
@@ -214,16 +258,31 @@ section.metrics-section {
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  padding: 5% 5%;
+  align-items: flex-start;
+  padding: 10% 5%;
   margin-top: 2%;
   background-color: #4e4e4e;
-  height: 33vh;
 }
 section.metrics-section .metric-content {
   width: 150px;
   text-align: center;
   color: #fff;
+}
+section.metrics-section .metric-content h2 {
+  margin-bottom: 10%;
+}
+section.metrics-section .metric-content div:after {
+  content: '';
+  display: block;
+  width: 20px;
+  padding: 2%;
+  border-bottom: 2px solid #46d2a3;
+  margin-left: 45%;
+}
+@media (max-width: 800px) {
+  section.metrics-section .metric-content {
+    margin-top: 5%;
+  }
 }
 section.metrics-section .metric-content p {
   padding-top: 20%;
@@ -319,12 +378,40 @@ section.blog-section .blog-container {
   margin: 5%;
   padding-top: 5%;
 }
+@media (max-width: 800px) {
+  section.blog-section .blog-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 500px) {
+  section.blog-section .blog-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
 section.blog-section .blog-container .blog-content {
   width: 27%;
   margin: 1%;
   padding: 1%;
   background: #faf9f9;
   border: 1px solid #eeeeee;
+}
+@media (max-width: 800px) {
+  section.blog-section .blog-container .blog-content {
+    width: 45%;
+  }
+}
+@media (max-width: 800px) {
+  section.blog-section .blog-container .blog-content {
+    width: 100%;
+  }
 }
 section.blog-section .blog-container .blog-content h4 {
   padding: 5%;
@@ -342,7 +429,7 @@ section.blog-section .blog-container .blog-content p {
   color: #333;
 }
 section.contact-section {
-  padding: 5%;
+  padding-bottom: 2%;
 }
 section.contact-section .contact-heading {
   text-align: center;
@@ -350,7 +437,6 @@ section.contact-section .contact-heading {
 section.contact-section .contact-heading h1:after {
   content: '';
   display: block;
-  margin-left: auto;
   width: 20px;
   padding: 2%;
   border-bottom: 2px solid #46d2a3;
@@ -370,9 +456,24 @@ section.contact-section .contact-container {
   margin: 0% 5%;
 }
 section.contact-section .contact-container .contact-content {
-  width: 42%;
+  width: 30%;
   margin: 0;
-  padding: 1%;
+  padding-right: 8%;
+}
+@media (max-width: 800px) {
+  section.contact-section .contact-container .contact-content {
+    width: 100%;
+    padding: 8%;
+  }
+}
+section.contact-section .contact-container .contact-content div.btn {
+  margin-top: 3px;
+  text-align: center;
+  background: #4e4e4e;
+  padding: 2%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.4rem;
 }
 section.contact-section .contact-container .contact-content .full label {
   font-size: 1.4rem;
@@ -405,9 +506,18 @@ section.team-section .team-content {
 section.team-section .team-content .team-intro {
   text-align: center;
 }
-section.team-section .team-content .team-intro h3,
 section.team-section .team-content .team-intro h4 {
-  padding-top: 2%;
+  padding: 5%;
+  font-size: 1.8rem;
+}
+section.team-section .team-content .team-intro h5 {
+  padding: 3%;
+  color: #46d2a3;
+}
+section.team-section .team-content .team-intro p {
+  padding-top: 5%;
+  font-size: 1.5rem;
+  color: #333;
 }
 header {
   display: flex;
@@ -415,9 +525,8 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding: 3.5%;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   header {
     display: flex;
     justify-content: center;
@@ -438,6 +547,12 @@ header nav {
   flex-wrap: wrap;
   align-items: center;
   padding: 2%;
+  margin: 0% 2%;
+}
+@media (max-width: 800px) {
+  header nav {
+    width: 100%;
+  }
 }
 @media (max-width: 500px) {
   header nav {
@@ -472,6 +587,12 @@ footer nav {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 2%;
+}
+@media (max-width: 800px) {
+  footer nav {
+    width: 100%;
+    margin: 0% 2%;
+  }
 }
 footer nav a {
   text-decoration: none;

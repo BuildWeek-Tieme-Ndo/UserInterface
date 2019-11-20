@@ -9,5 +9,43 @@
     align-items: @align;
 }
 
+//used in the form and subscribe
+.btn_class() {
+    text-align: center;
+    background: @btn-color;
+    padding: 2%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size:1.4rem;
+
+    
+}
+// Used in the background and other parts of the front end web
+.primary_button(){
+    color:#fff;
+    background:@blog-category-color;
+    height: 50px;
+    line-height: 50px;
+    text-transform: capitalize;
+    display: block;
+    position: relative;
+    text-align: center;
+    border-radius: 3px;
+    font-size:1.5rem;
+    font-weight:500;
+
+}
+
+//underline
+.under_line(){
+    content:'';
+    display:block;
+    width:20px;
+    padding:2%;
+    border-bottom:2px solid @blog-category-color;
+    margin-left:45%;
+}
+
+
 @mobile: ~"(max-width: 500px)";
 @tablet: ~"(max-width: 800px)";
