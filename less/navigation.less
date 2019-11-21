@@ -1,4 +1,4 @@
-@import "mixins";
+//header
 header{
     //
     
@@ -12,29 +12,32 @@ header{
     background: white;
     
     
-    
+    //tablet
     @media @tablet{
         .flex-display(center,column,wrap);
     }
+    //logo
     .logo{
         //width: 30px;
         margin-left: 1%;
     }
 
     
-    
+    //nav
     nav {
         width: 40%;
         .flex-display(space-between,row,wrap);
         padding: 2%;
         margin: 0% 2%;
+        //tablet
         @media @tablet {
-            width: 100%;
+            width: 80%;
         }
+        //mobile
         @media @mobile{
             .flex-display(center,column,wrap);
         }
-
+        //navigation link
         a {
             text-decoration: none;
             font-size: 1.4rem;
