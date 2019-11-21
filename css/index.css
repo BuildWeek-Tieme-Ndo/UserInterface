@@ -168,6 +168,22 @@ h5 {
     opacity: 1;
   }
 }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes extend {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 div.site-container {
   margin-top: 100px;
 }
@@ -275,6 +291,9 @@ section.features-section .feature-container {
   width: 300px;
   padding-top: 5%;
   display: flex;
+}
+section.features-section .feature-container:hover .icon h4 .fa {
+  animation: spin 0.3s 1;
 }
 section.features-section .feature-container .icon {
   padding-right: 5%;
@@ -555,7 +574,7 @@ section.team-section .team-content .team-intro h5 {
 }
 section.team-section .team-content .team-intro h5 .color {
   color: #46d2a3;
-  line-height: 2;
+  line-height: 2  ;
 }
 section.team-section .team-content .team-intro p {
   padding-top: 5%;
@@ -636,6 +655,7 @@ header nav a:hover:after {
   margin-left: 45%;
   width: 100%;
   margin: 0%;
+  animation: extend 1s 1;
 }
 @media (max-width: 500px) {
   header nav a {
