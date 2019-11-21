@@ -15,6 +15,7 @@ div.background {
         color: white;
         text-align: left;
         padding-bottom: 2%;
+        animation: fadeIn 1s 1;
         @media @tablet{
             text-align: center;
         }
@@ -25,6 +26,7 @@ div.background {
         .primary_button();
         text-decoration: none;
         width:160px;
+        animation: fadeIn 1.5s 1;
             &:hover {
                 background:@news-background;
                 color: black;
@@ -72,16 +74,24 @@ div.container {
        
         .flex-display(space-between,row,wrap,@align: flex-start);
         padding-top:5%;
-        @media @tablet {
+        @media @mobile {
             
-            .flex-display(center,column,wrap);
+            .flex-display(center,column,wrap,center);
         }
        
         
         .feature-container{
            width:300px;
            padding-top:5%;
-           
+            display:flex;
+           .icon {
+               padding-right: 5%;
+               h4 {
+                   .fa {
+                       color:@blog-category-color;
+                   }
+               }
+           }
 
             p {
                 color: @features-font-color;

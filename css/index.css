@@ -159,6 +159,14 @@ h4 {
 h5 {
   font-size: 1.3rem;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 div.site-container {
   margin-top: 100px;
 }
@@ -174,6 +182,7 @@ div.background div h1 {
   color: white;
   text-align: left;
   padding-bottom: 2%;
+  animation: fadeIn 1s 1;
 }
 @media (max-width: 800px) {
   div.background div h1 {
@@ -194,6 +203,7 @@ div.background div .learn-more {
   font-weight: 500;
   text-decoration: none;
   width: 160px;
+  animation: fadeIn 1.5s 1;
 }
 div.background div .learn-more:hover {
   background: #faf9f9;
@@ -241,7 +251,7 @@ section.features-section {
   align-items: flex-start;
   padding-top: 5%;
 }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   section.features-section {
     display: flex;
     justify-content: center;
@@ -253,6 +263,13 @@ section.features-section {
 section.features-section .feature-container {
   width: 300px;
   padding-top: 5%;
+  display: flex;
+}
+section.features-section .feature-container .icon {
+  padding-right: 5%;
+}
+section.features-section .feature-container .icon h4 .fa {
+  color: #46d2a3;
 }
 section.features-section .feature-container p {
   color: #333;
