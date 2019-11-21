@@ -279,6 +279,15 @@ section.features-section {
   align-items: flex-start;
   padding-top: 5%;
 }
+@media (max-width: 800px) {
+  section.features-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
 @media (max-width: 500px) {
   section.features-section {
     display: flex;

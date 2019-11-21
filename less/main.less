@@ -85,6 +85,10 @@ div.container {
        
         .flex-display(space-between,row,wrap,@align: flex-start);
         padding-top:5%;
+        @media @tablet {
+            .flex-display(center,row,wrap,@align: flex-start);
+        }
+        
         @media @mobile {
             
             .flex-display(center,column,wrap,center);
