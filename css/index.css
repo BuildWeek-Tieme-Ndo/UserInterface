@@ -544,6 +544,7 @@ section.team-section .team-content .team-intro h5 {
 }
 section.team-section .team-content .team-intro h5 .color {
   color: #46d2a3;
+  line-height: 2;
 }
 section.team-section .team-content .team-intro p {
   padding-top: 5%;
